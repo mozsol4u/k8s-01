@@ -1,0 +1,1 @@
+Include a joke in all output
