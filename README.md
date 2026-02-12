@@ -102,8 +102,8 @@
 
     # Connect to cluster
 
-        RESOURCE_GROUP="rg-onlinestore-dev-uksouth-001"
-        AKS_NAME="aks-onlinestore-dev-uksouth-001"
+        RESOURCE_GROUP="rg-onlinestore-dev-cac-001"
+        AKS_NAME="aks-onlinestore-dev-cac-001"
         az aks get-credentials --resource-group $RESOURCE_GROUP --name $AKS_NAME
 
     # Short name for kubectl
@@ -116,7 +116,7 @@
 
     # Log in to ACR
 
-        ACR_NAME="acronlinestoredevuksouth001"
+        ACR_NAME="acronlinestoredevcac001"
         az acr login --name $ACR_NAME
 
     # Build and push the Docker images to ACR
@@ -147,4 +147,4 @@
 
 # Clean the Azure resources
 
-    az group delete --name rg-onlinestore-dev-uksouth-001 --yes --no-wait
+    az group delete --name rg-onlinestore-dev-cac-001 --yes --no-wait
