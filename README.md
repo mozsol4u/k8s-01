@@ -107,6 +107,7 @@
         az aks get-credentials --resource-group $RESOURCE_GROUP --name $AKS_NAME
 
     # Short name for kubectl
+        alias k=kubectl
 
     # Show all existing objects
 
@@ -137,6 +138,23 @@
         docker push $ACR_NAME.azurecr.io/store-front:v1
 
         docker images
+
+# App deployment
+
+    # Kubernets YAML Mainfests for the applications
+
+    configmap.yml
+    order-deployment.yml
+    order-service.yml
+    product-deployment.yml
+    product-service.yml
+    store-front-deployment.yml
+    store-front-service.yml
+    rabbitmg-service.yml
+    rabbitmg-statefulset.yml
+    
+    # Deploy the services to AKS using kubectl and mainfest files
+      kubectl apply -f ./mainfests
 
 # Verify the Deployment
 
